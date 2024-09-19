@@ -1,0 +1,98 @@
+
+class HomeAppliance {
+    String brand;
+    int price; // in rs
+    String color;
+
+    HomeAppliance(String brand, int price, String color) {
+        this.brand = brand;
+        this.price = price;
+        this.color = color;
+    }
+
+    HomeAppliance() {
+        this.brand = "Samsung";
+        this.price = 30000;
+        this.color = "Gray";
+    }
+
+    void turnOn() {
+        System.out.println("The appliance is now ON.");
+    }
+
+    void turnOff() {
+        System.out.println("The appliance is now OFF.");
+    }
+}
+
+class WashingMachine extends HomeAppliance {
+    int drumCapacity; // in liters
+
+    WashingMachine(String brand, int price, String color, int drumCapacity) {
+        super(brand, price, color); 
+        this.drumCapacity = drumCapacity;
+    }
+
+    WashingMachine() {
+        super(); 
+        this.drumCapacity = 30; // Default capacity
+    }
+
+    void startWash() {
+        System.out.println("The wash cycle has started.");
+    }
+
+    void displayDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: " + price + " Rs");
+        System.out.println("Color: " + color);
+        System.out.println("Drum Capacity: " + drumCapacity + " liters");
+    }
+}
+
+class SmartWashingMachine extends WashingMachine {
+    boolean hasWifi; 
+    boolean isEnergyEfficient; 
+
+    SmartWashingMachine(String brand, int price, String color, int drumCapacity, boolean hasWifi, boolean isEnergyEfficient) {
+        super(brand, price, color, drumCapacity);
+        this.hasWifi = hasWifi;
+        this.isEnergyEfficient = isEnergyEfficient;
+    }
+
+    SmartWashingMachine() {
+        super();
+        this.hasWifi = true; // Default value
+        this.isEnergyEfficient = true; // Default value
+    }
+
+    void connectToNetwork() {
+        if (hasWifi) {
+            System.out.println("Connecting to Wi-Fi network...");
+        } else {
+            System.out.println("This model does not support Wi-Fi connectivity.");
+        }
+    }
+
+  
+}
+
+
+class Main {
+    public static void main(String[] args) {
+     
+        SmartWashingMachine smartWashingMachine1 = new SmartWashingMachine("Bosch", 50000, "Black", 40, true, true);
+        smartWashingMachine1.turnOn();
+        smartWashingMachine1.connectToNetwork();
+        smartWashingMachine1.startWash();
+        smartWashingMachine1.displayDetails();
+        smartWashingMachine1.turnOff();
+
+        SmartWashingMachine smartWashingMachine2 = new SmartWashingMachine();
+        smartWashingMachine2.turnOn();
+        smartWashingMachine2.connectToNetwork();
+        smartWashingMachine2.startWash();
+        smartWashingMachine2.displayDetails();
+        smartWashingMachine2.turnOff();
+    }
+}

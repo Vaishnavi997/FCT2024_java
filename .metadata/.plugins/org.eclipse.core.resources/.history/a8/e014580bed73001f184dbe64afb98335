@@ -1,0 +1,52 @@
+class HomeAppliance {
+    String brand;
+    int price;
+    String color;
+
+    HomeAppliance(String brand, int power, String color) {
+        this.brand = brand;
+        this.price= price;
+        this.color = color;
+    }
+
+    HomeAppliance() {
+        this.brand = "Samsung";
+        this.price = 25000;
+        this.color = "Gray";
+    }
+
+    void turnOn() {
+        System.out.println("The appliance is now ON.");
+    }
+
+    void turnOff() {
+        System.out.println("The appliance is now OFF.");
+    }
+}
+
+class WashingMachine extends HomeAppliance {
+    int drumCapacity; // in liters
+
+    WashingMachine(String brand, int power, String color, int drumCapacity) {
+        super(brand, power, color); 
+        this.drumCapacity = drumCapacity;
+  
+    }
+
+    WashingMachine() {
+        super(); 
+        this.drumCapacity = 50; // Default capacity
+     
+    }
+
+    void startWash() {
+        System.out.println("The wash cycle has started.");
+    }
+
+    void displayDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Power: " + price + "Rs");
+        System.out.println("Color: " + color);
+        System.out.println("Drum Capacity: " + drumCapacity + " liters");
+    }
+}

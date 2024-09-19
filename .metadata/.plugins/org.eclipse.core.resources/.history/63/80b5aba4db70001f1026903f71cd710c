@@ -1,0 +1,17 @@
+
+public class Library {
+     public static void main(String[] args) {
+		System.out.println();
+		Book reading = new Book();
+	}
+}
+
+class Book{
+	static ABC reading = new Book();
+}
+
+class ABC{
+	void read() {
+		System.out.println("ABC is reading book...");
+	}
+}

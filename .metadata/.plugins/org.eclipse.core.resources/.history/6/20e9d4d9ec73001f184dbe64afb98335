@@ -1,0 +1,49 @@
+class HomeAppliance {
+    String brand;
+    int power;
+    String color;
+
+    HomeAppliance(String brand, int power, String color) {
+        this.brand = brand;
+        this.power = power;
+        this.color = color;
+    }
+
+    HomeAppliance() {
+        this.brand = "Unknown Brand";
+        this.power = 1000;
+        this.color = "Blue";
+    }
+
+    void turnOn() {
+        System.out.println("The appliance is now ON.");
+    }
+
+    void turnOff() {
+        System.out.println("The appliance is now OFF.");
+    }
+}
+
+class Refrigerator extends HomeAppliance {
+    int capacityLiters;
+
+    Refrigerator(String brand, int power, String color, int capacityLiters) {
+        super(brand, power, color);
+        this.capacityLiters = capacityLiters;
+    }
+
+    Refrigerator() {
+        super();
+        this.capacityLiters = 200;
+    }
+
+    void showCapacity() {
+        System.out.println("Refrigerator capacity: " + capacityLiters + " liters");
+    }
+
+  
+    void coolItems() {
+        System.out.println("The refrigerator is cooling items.");
+    }
+}
+

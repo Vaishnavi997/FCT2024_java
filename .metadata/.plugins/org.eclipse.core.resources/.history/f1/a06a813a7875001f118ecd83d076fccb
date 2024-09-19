@@ -1,0 +1,62 @@
+
+class Hostel {
+    String name;
+    int capacity; // Number of people 
+    void open() {
+        System.out.println("The hostel is now open.");
+    }
+
+    void close() {
+        System.out.println("The hostel is now closed.");
+    }
+
+    String producesA() {
+        return "Hostel produces accommodation services.";
+    }
+
+    void showDetails() {
+        System.out.println("Hostel Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Capacity: " + capacity + " people");
+    }
+}
+
+
+class BudgetHostel extends Hostel { // isA
+    boolean freeWiFi; // hasA
+
+    void provideWiFi() { // usesA
+        if (freeWiFi) {
+            System.out.println("Providing free WiFi.");
+        } else {
+            System.out.println("No free WiFi available.");
+        }
+    }
+
+    @Override
+    String producesA() {
+        return super.producesA() + " Additionally, this budget hostel offers free WiFi service.";
+    }
+
+    @Override
+    void showDetails() {
+        super.showDetails();
+        System.out.println("Free WiFi: " + (freeWiFi ? "Yes" : "No"));
+    }
+}
+
+
+public class ProducesATest {
+    public static void main(String[] args) {
+        BudgetHostel budgetHostel = new BudgetHostel();
+        budgetHostel.name = "Zeal Girls Hostel";
+        budgetHostel.capacity = 120;
+        budgetHostel.freeWiFi = true;
+
+        budgetHostel.open();
+        budgetHostel.showDetails();
+        System.out.println("Produces: " + budgetHostel.producesA()); 
+        budgetHostel.provideWiFi();
+        budgetHostel.close();
+    }
+}

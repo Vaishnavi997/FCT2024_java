@@ -1,0 +1,18 @@
+
+public class Hello {
+ public static void main(String[] args) {
+	System.out.println("Java is easy");
+	//just a ref= actual obj
+	Lion lionkingr = new Lion();
+	lionking.roar();
+}
+}
+
+class Jungle{
+	
+}
+class Lion{
+	void roar() {
+		System.out.println("Lion is roaring ..");
+	}
+}

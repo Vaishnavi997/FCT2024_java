@@ -1,0 +1,45 @@
+package com.fc.finaltest;
+
+public class TeacherTest {
+	public static void main(String[] args) {
+		Person person = new Teacher();
+		person.learn();
+	}
+
+}
+final class Person{
+	
+	 final String getName(String name) {
+	        return  name ;
+	    }
+	final void learn() {
+		System.out.println("Person is learning...");
+	}
+	
+	final void play() {
+		System.out.println("Person is playing..");
+	}
+	final void teach() {
+		System.out.println("Person is teachig..");
+	}
+	
+	final void salary() {
+		System.out.println("get 40K Salary..");
+	}
+	 
+	 
+ }
+ 
+ class Teacher extends Person{
+	 
+	 void teacherlearn() {
+		 System.out.println("teacher is learning to teach the students...");
+	 }
+	 
+	void teacheralary() {
+			System.out.println("get 40K Salary..");
+		}
+	 
+	 
+ }
+ 

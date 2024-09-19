@@ -1,0 +1,53 @@
+
+class LessonPreparation {
+    String lessonPlan;
+    String teachingMaterials;
+
+    void prepareLesson() {
+     
+    }
+}
+
+class LessonDelivery {
+    String classroom;
+    String whiteboard;
+
+    void deliverLesson() {
+       
+    }
+}
+
+class StudentAssessment {
+    String test;
+    String gradingCriteria;
+
+    void assessStudents() {
+        
+    }
+}
+
+
+class Feedback {
+    String feedbackForm;
+
+    void provideFeedback() {
+        
+}
+
+
+public class TeachingProcess {
+    public static void main(String[] args) {
+      
+        LessonPreparation prep = new LessonPreparation();
+        prep.prepareLesson();
+
+        LessonDelivery deliver = new LessonDelivery();
+        deliver.deliverLesson();
+
+        StudentAssessment assess = new StudentAssessment();
+        assess.assessStudents();
+
+        Feedback feedback = new Feedback();
+        feedback.provideFeedback();
+    }
+}

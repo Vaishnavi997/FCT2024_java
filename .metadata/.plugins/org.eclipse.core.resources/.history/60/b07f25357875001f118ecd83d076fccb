@@ -1,0 +1,28 @@
+package homeappliance.washingmachine;
+
+
+
+public class WashingMachine extends HomeAppliance {
+    int drumCapacity; // in liters
+
+    WashingMachine(String brand, int price, String color, int drumCapacity) {
+        super(brand, price, color); 
+        this.drumCapacity = drumCapacity;
+    }
+
+    WashingMachine() {
+        super(); 
+        this.drumCapacity = 30; // Default capacity
+    }
+
+    void startWash() {
+        System.out.println("The wash cycle has started.");
+    }
+
+    void displayDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Price: " + price + " Rs");
+        System.out.println("Color: " + color);
+        System.out.println("Drum Capacity: " + drumCapacity + " liters");
+    }
+}

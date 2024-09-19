@@ -1,0 +1,21 @@
+package com.fc.finaltest;
+
+public class TeacherTest {
+	public static void main(String[] args) {
+		
+	}
+
+}
+class Person{
+	
+	void learn() {
+		
+	}
+	 
+	 
+ }
+ 
+ class Teacher extends Person{
+	 
+ }
+ 

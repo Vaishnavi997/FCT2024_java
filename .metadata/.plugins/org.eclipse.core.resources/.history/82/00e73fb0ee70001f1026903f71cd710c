@@ -1,0 +1,49 @@
+
+
+public class StudentTest {
+
+    public static void main(String[] args) {
+
+        Student student = new Student(); 
+        student.rank = 1;
+        student.studentName = "Riya";
+        student.age =22;
+        student.numberOfSubjects= 3;
+        
+        student.addMarks(85); 
+        student.printStudentInformation();
+        
+        student.addMarks(90); 
+        student.printStudentInformation();
+        
+        student.addMarks(95); 
+        student.printStudentInformation();
+        
+    }
+}
+
+class Student 
+{
+    int rank;
+    String studentName;
+    int age;
+    float averageMarks;
+    int totalMarks;
+    int numberOfSubjects;
+    
+    
+    void addMarks(int marks) {
+        System.out.println("Adding " + marks + " marks...");
+        totalMarks += marks;
+        numberOfSubjects++;
+        averageMarks =  totalMarks / numberOfSubjects;
+    }
+
+   
+    void printStudentInformation() {
+        System.out.println("Rank           : " + rank);
+        System.out.println("Student Name   : " + studentName);
+        System.out.println("Total Marks    : " + totalMarks);
+        System.out.println("Average Marks  : " + averageMarks);
+    }
+}

@@ -1,0 +1,20 @@
+
+public class PointTest {
+
+}
+
+
+class Point2D{
+	int x;
+	int y;
+	
+	Point2D(int a, int b){
+		x=a;
+		y=b;
+	}
+	
+	void showPoint() {
+		System.out.println();
+		
+	}
+}

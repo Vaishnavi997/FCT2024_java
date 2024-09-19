@@ -1,0 +1,12 @@
+package jungle.compound;
+
+public class FarmHouse {
+
+	void meditate() {
+		System.out.println("Meditating in the farmhouse..");
+	}
+	
+	void relax() {
+		System.out.println("Relaxing in the farmhouse...");
+	}
+}

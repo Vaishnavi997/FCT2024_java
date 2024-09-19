@@ -1,0 +1,70 @@
+class Appliance {
+    String brand;
+    int price; // in rs
+    String color;
+
+    void turnOn() {
+        System.out.println("The appliance is now ON.");
+    }
+
+    void turnOff() {
+        System.out.println("The appliance is now OFF.");
+    }
+}
+
+class Refrigerator extends Appliance { // isA
+    Compressor compressor = new Compressor(); // hasA
+    int capacityInLiters;
+    int currentTemperature;
+
+    void store(FoodItem foodItem) { // usesA
+        if (foodItem == null) {
+            System.out.println("Error: No food item provided.");
+            return;
+        }
+        System.out.println("Storing " + foodItem.name + " in the refrigerator.");
+    }
+
+    void setTemperature(int temperature) { // usesA
+        currentTemperature = temperature;
+        System.out.println("Refrigerator temperature set to " + temperature + "°C.");
+    }
+}
+
+class Compressor {
+    int powerInWatts;
+
+    void start() {
+        System.out.println("The compressor starts.");
+    }
+
+    void stop() {
+        System.out.println("The compressor stops.");
+    }
+}
+
+class FoodItem {
+    String name;
+    String type;
+    int quantity; // Quantity in units
+    double weight; // Weight in kilograms
+}
+
+class Test {
+    public static void main(String[] args) {
+        Refrigerator refrigerator = new Refrigerator();
+        refrigerator.brand = "Samsung";
+        refrigerator.capacityInLiters = 300;
+
+        FoodItem foodItem = new FoodItem();
+        foodItem.name = "Milk";
+        foodItem.type = "Dairy";
+        foodItem.quantity = 1 ;
+        foodItem.weight = 2;
+        
+        refrigerator.turnOn();
+        refrigerator.setTemperature(4);
+        refrigerator.store(foodItem);
+        refrigerator.turnOff();
+    }
+}

@@ -1,0 +1,30 @@
+class LightingDevice {
+    String brand;
+    int powerConsumption;
+    String material; 
+  
+
+ 
+    LightingDevice(String brand, int powerConsumption, String material, boolean hasSwitch) {
+        this.brand = brand;
+        this.powerConsumption = powerConsumption;
+        this.material = material;
+     
+    }
+
+    // Default constructor
+    LightingDevice() {
+        this.brand = "Unknown";
+        this.powerConsumption = 0;
+        this.material = "Plastic"; // Default material
+      
+    }
+
+    void turnOn() {
+        System.out.println("The lighting device is now ON.");
+    }
+
+    void turnOff() {
+        System.out.println("The lighting device is now OFF.");
+    }
+}

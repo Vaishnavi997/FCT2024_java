@@ -1,0 +1,77 @@
+class Appliance {
+	 String brand;
+	 int price; // in rs
+	 String color;
+   
+	    void turnOn() {
+	        System.out.println("The appliance is now ON.");
+	    }
+
+	    void turnOff() {
+	        System.out.println("The appliance is now OFF.");
+	    }
+	
+}
+
+class WashingMachine extends Appliance { // isA 
+    Motor motor = new Motor(); // hasA 
+    int capacityInLiters;
+
+    void wash(Clothes clothes, Detergent detergent) { // usesA
+        
+    }
+    
+    WaterUsage checkWaterUsage() { // usesA
+        WaterUsage usage = new WaterUsage();
+        usage.litersUsed = 50.0f; // example value
+        return usage;
+    }
+}
+
+class Motor {
+    int powerInWatts;
+    
+    void start() {
+        // Motor start logic
+    }
+
+    void stop() {
+        // Motor stop logic
+    }
+}
+
+class Clothes {
+    String fabricType;
+    String color;
+}
+
+class Detergent {
+    String brand;
+    String type;
+}
+
+class WaterUsage {
+    float litersUsed;
+}
+
+class Test {
+    public static void main(String[] args) {
+        WashingMachine washingmachine = new WashingMachine();
+        washingmachine.brand = "Whirlpool";
+        washingmachine.capacityInLiters = 7;
+
+        Clothes clothes = new Clothes();
+        clothes.fabricType = "Cotton";
+        clothes.color = "White";
+
+        Detergent detergent = new Detergent();
+        detergent.brand = "Tide";
+        detergent.type = "Liquid";
+        
+        washingmachine.turnOn();
+        washingmachine.wash(clothes, detergent);
+        WaterUsage usage = washingmachine.checkWaterUsage();
+        System.out.println("Water used: " + usage.litersUsed + " liters");
+        washingmachine.turnOff();
+    }
+}

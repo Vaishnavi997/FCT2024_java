@@ -1,0 +1,9 @@
+INDEX VERSION 1.134+C:\Users\Vaishnavi kad\OneDrive - Four Colors Technology\FCT_2024_JAVA_Training\.metadata\.plugins\org.eclipse.jdt.core
+3408821695.index
+1474686092.index
+3119222176.index
+3847214060.index
+1865797976.index
+3471621430.index
+1425499587.index
+3158107065.index
